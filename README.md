@@ -48,10 +48,6 @@ You can interact with the deployed token in the following ways:
 
 To interact with the contract on Sepolia, you'll need test ETH. You can obtain test ETH from the [Sepolia Faucet](https://sepoliafaucet.com).
 
-## Technical Documentation
-
-For detailed technical information about the token contract, please refer to the [Technical Documentation](technical-docs.md).
-
 ## Resources
 
 - [Sepolia Etherscan](https://sepolia.etherscan.io)

@@ -9,7 +9,9 @@ contract Veigar42winrate is ERC20, Ownable, Pausable {
     uint8 private constant _decimals = 18;
     uint256 private constant INITIAL_SUPPLY = 27341; // 27 * 1000 tokens + 341
 
-    constructor(address initialOwner) ERC20("Veigar42winrate", "V42GR") Ownable(initialOwner) {
+    constructor(
+        address initialOwner
+    ) ERC20("Veigar42winrate", "V42GR") Ownable(initialOwner) {
         _mint(msg.sender, INITIAL_SUPPLY * 10 ** decimals());
     }
 

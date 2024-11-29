@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useConnect } from '@wagmi/vue'
 
-const { connect, connectors, error, status } = useConnect()
+const { connect, connectors, status } = useConnect()
 const chainId = 11155111
 </script>
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed } from "vue"
 import { useAccount, useDisconnect, useBalance } from '@wagmi/vue'
 import { formatEther } from 'viem'
+import { computed } from 'vue'
 
 const veigar42Token = "0x19cB76f49dB0921b2099f06A4E74413690945c16"
 

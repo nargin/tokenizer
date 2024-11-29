@@ -10,7 +10,7 @@ const chainId = 11155111
     <div class="w-full max-w-md bg-white shadow-xl rounded-xl p-6 text-center">
       <h2 class="text-3xl font-bold text-purple-900 mb-6">Wallet Connection</h2>
       
-      <div v-if="status !== 'success'" class="space-y-2">
+      <div v-if="status !== 'success' && connectors.length != 0" class="space-y-2">
         <button
           v-for="connector in connectors"
           :key="connector.id"
@@ -21,12 +21,8 @@ const chainId = 11155111
           {{ connector.name }}
         </button>
       </div>
-      
-      <div v-else class="space-y-4">
-        <p class="text-green-600 font-semibold">Wallet Connected</p>
-        <div v-if="error?.message">
-          Error: {{ error.message }}
-        </div>
+      <div v-else>
+        No wallet found go next !
       </div>
     </div>
   </div>

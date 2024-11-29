@@ -80,7 +80,7 @@ const ethBalance = computed(() =>
       v-if="status !== 'disconnected'" 
       type="button" 
       @click="disconnect()"
-      class="w-full bg-red-500 text-white py-2 rounded-md hover:bg-red-600 transition-colors duration-300"
+      class="w-full bg-purple-600 text-white py-2 rounded-md hover:bg-purple-700 transition-colors duration-300"
     >
       Disconnect Wallet
     </button>

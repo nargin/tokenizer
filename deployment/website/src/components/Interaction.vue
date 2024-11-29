@@ -115,7 +115,7 @@ const handleBurn = async () => {
         <button 
           @click="handleBurn"
           :disabled="isBurning"
-          class="w-full bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 disabled:opacity-50"
+          class="w-full bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 disabled:opacity-50"
         >
           {{ isBurning ? 'Burning...' : 'Burn One Token' }}
         </button>

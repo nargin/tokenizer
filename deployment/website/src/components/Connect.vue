@@ -1,21 +1,33 @@
 <script setup lang="ts">
-import { useChainId, useConnect } from '@wagmi/vue'
+import { useConnect } from '@wagmi/vue'
 
-const chainId = useChainId()
 const { connect, connectors, error, status } = useConnect()
+const chainId = 11155111
 </script>
 
 <template>
-  <h2>Connect</h2>
-
-  <button v-for="connector in connectors" :key="connector.id" type="button" @click="connect({ connector, chainId })">
-    {{ connector.name }}
-  </button>
-
-  <div>
-    Connection status: {{ status }}
-  </div>
-  <div v-if="error?.message">
-    Error: {{ error.message }}
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-50 to-purple-100 p-4">
+    <div class="w-full max-w-md bg-white shadow-xl rounded-xl p-6 text-center">
+      <h2 class="text-3xl font-bold text-purple-900 mb-6">Wallet Connection</h2>
+      
+      <div v-if="status !== 'success'" class="space-y-2">
+        <button
+          v-for="connector in connectors"
+          :key="connector.id"
+          type="button"
+          @click="connect({ connector, chainId })"
+          class="w-full py-2 px-4 bg-purple-600 text-white font-semibold rounded-lg shadow-md hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-75"
+        >
+          {{ connector.name }}
+        </button>
+      </div>
+      
+      <div v-else class="space-y-4">
+        <p class="text-green-600 font-semibold">Wallet Connected</p>
+        <div v-if="error?.message">
+          Error: {{ error.message }}
+        </div>
+      </div>
+    </div>
   </div>
 </template>

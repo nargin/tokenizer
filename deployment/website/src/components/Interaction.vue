@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useAccount, useWriteContract, useReadContract } from '@wagmi/vue'
+import { useAccount, useWriteContract } from '@wagmi/vue'
 import { parseEther } from 'viem'
 
 const contractAddress = "0x19cB76f49dB0921b2099f06A4E74413690945c16"
@@ -125,12 +125,16 @@ const handleBurn = async () => {
 </template>
 
 <style scoped>
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
+input[type="number"] {
+  /* Remove spin buttons in WebKit browsers (Chrome, Safari) */
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-input[type=number] {
-  -moz-appearance: textfield;
 }
 </style>

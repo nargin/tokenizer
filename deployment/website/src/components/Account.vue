@@ -35,14 +35,14 @@ const ethBalance = computed(() =>
   <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg p-6 space-y-4">
     <h2 class="text-2xl font-bold text-center text-gray-800 mb-4">Account Details</h2>
 
-    <div class="bg-gray-100 p-4 rounded-md space-y-2">
+    <div class="bg-gray-100 p-4 rounded-md space-y-1">
       <div class="flex justify-between items-center">
         <span class="font-semibold text-gray-600">Account: </span>
-        <span class="text-blue-600 font-mono">
-          {{ address }}
-        </span>
       </div>
-
+      <div class="text-blue-600 font-mono text-sm">
+        {{ address }}
+      </div>
+      
       <div class="flex justify-between items-center">
         <span class="font-semibold text-gray-600">Chain ID: </span>
         <span class="text-gray-800">{{ chainId }}</span>
